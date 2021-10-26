@@ -1,28 +1,102 @@
+/* stylelint-disable docusaurus/copyright-header */
+
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
  */
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
-  --ifm-code-font-size: 95%;
+ html[data-theme="light"] {
+  --ifm-hr-border-color: rgb(190 195 201 / 45%);
+  --ifm-blockquote-border-left-width: 4px;
+  --ifm-blockquote-background-color: #f4f7f9;
+  --ifm-blockquote-padding-vertical: 12px;
+  --ifm-paragraph-margin-bottom: 12px;
+  --color-border-muted: hsla(210, 18%, 87%, 1);
+  --ifm-font-size-base: 14px;
 }
 
-.docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 966px) {
+  .heroBanner {
+      padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  place-content: center;
+}
+
+.section {
+  margin: 10rem;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureImage {
+  height: 200px;
+  width: 200px;
+}
+
+code {
+  vertical-align: baseline;
+}
+
+hr {
+  border-bottom: 0;
+}
+
+blockquote {
+  background: var(--ifm-blockquote-background-color);
+}
+
+:global(.markdown) > h2 {
+  padding-bottom: 0.3em;
+  border-bottom: solid var(--color-border-muted) 1px;
+}
+
+:global(.markdown) h1 {
+  padding-bottom: 0.3em;
+  border-bottom: solid var(--color-border-muted) 1px;
+}
+
+blockquote p {
+  margin-bottom: 0px;
+}
+
+:global(.docusaurus-highlight-code-line) {
+  background-color: rgb(158 158 158 / 22%);
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme='dark'] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
+/* If you have a different syntax highlighting theme for dark mode. */
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+  /* Color which works with dark mode syntax highlighting theme */
+  background-color: rgb(100, 100, 100);
+}
+
+:global(.markdown) li > p {
+  margin: 2px 0;
 }
