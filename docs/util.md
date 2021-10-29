@@ -794,7 +794,7 @@ colors", and "Background colors").
 Modifier support varies throughout different terminals. They will mostly be
 ignored, if not supported.
 
-* `reset` - Resets all (color) modifiers to their defaults
+<!-- * `reset` - Resets all (color) modifiers to their defaults
 * **bold** - Make text bold
 * _italic_ - Make text italic
 * <span style="border-bottom: 1px;">underline</span> - Make text underlined
@@ -809,7 +809,7 @@ ignored, if not supported.
   background colors (Alias: `swapcolors`, `swapColors`)
 * <span style="border-bottom: 1px double;">doubleunderline</span> - Make text
   double underlined (Alias: `doubleUnderline`)
-* <span style="border: 1px">framed</span> - Draw a frame around the text
+* <span style="border: 1px">framed</span> - Draw a frame around the text -->
 
 #### Foreground colors
 

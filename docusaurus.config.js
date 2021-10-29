@@ -10,12 +10,14 @@ const config = {
   tagline: 'Dinosaurs are cool',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
-
+  themes: [
+    "docusaurus-theme-search-typesense",
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -42,6 +44,26 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      typesense: {
+        typesenseCollectionName: "node_docs", // Replace with your own doc site's name. Should match the collection name in the scraper settings.
+
+        typesenseServerConfig: {
+            nodes: [
+                {
+                    host: "127.0.0.1",
+                    port: 8208,
+                    protocol: "http",
+                },
+            ],
+            apiKey: "xyz",
+        },
+
+        // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/documents.html#arguments
+        typesenseSearchParameters: {},
+
+        // Optional
+        contextualSearch: true,
+    },
       navbar: {
         title: 'My Node Doc',
         logo: {

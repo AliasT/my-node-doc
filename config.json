@@ -1,0 +1,1 @@
+{"index_name":"node_docs","start_urls":[{"url":"http://node.me.com"}],"selectors":{"default":{"lvl0":"h1","lvl1":"h2","lvl2":"h3","lvl3":"h4","lvl4":"h5","text":"code, p, ul li, table tbody tr"}},"scrape_start_urls":false,"strip_chars":" .,;:#"}
